@@ -1,0 +1,196 @@
+@import url(https://db.onlinewebfonts.com/c/2da952d097bffd198ec0f0aa3fdd6804?family=JejuHallasan);
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=M+PLUS+1+Code:wght@100..700&display=swap')
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(img/fon2.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+}
+.header-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    padding: 20px 100px;
+}
+.logo {
+    width: 41px;
+    height: 46px;
+    position: absolute;
+    padding: 10px;
+}
+.text{
+    content: "Coffee \A like";
+    white-space: pre;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    left: 0;
+    font-family: JejuHallasan;
+    
+}
+
+.nav {
+}
+.nav-list {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    display: flex;
+    position: absolute;
+    right: 0;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: JejuHallasan;
+}
+.corz{
+    width: 30px;
+    height: 30px;
+}
+
+.intro {
+}
+.intro-container {
+    max-width: 1350px;
+    max-height: 200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 25px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    padding: 150px 15px;
+}
+.intro-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+    position: relative;
+}
+.intro-heading {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 60px;
+    margin: 0px;
+}
+.intro-text {
+    font-family: 'M PLUS 1 Code', monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.btnn{
+    max-width: 300px;
+    /* margin: 0 auto; */
+    padding: 35px 0px;
+}
+
+.intro-btn {
+    color: #000000;
+    font-size: 18px;
+    text-decoration: none;
+    background: #E3D1B6;
+    padding: 5px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    box-shadow: inset 0 4px 4px #00000040, 0 4px 4px #00000040;
+}
+.intro-btn2 {
+    color: #FFFFFF;
+    font-size: 18px;
+    text-decoration: none;
+    background: #343237;
+    padding: 5px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 25px;
+    box-shadow: inset 0 4px 4px #00000040, 0 4px 4px #00000040;
+}
+.burger{
+    width: 40px;
+    height: 30px;
+    background: none;
+    border: none;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+}
+
+.burger span{
+    height: 4px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .fixed-img{
+        display: none;
+    }
+    .intro-container{
+        flex-direction: column;
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: #bbac8a;
+        z-index: 10;
+        padding: 30px 15px;
+        transform: translateX(-100%);
+        transition: all 0.3s ease 0s;
+    }
+    .nav.clicked{
+        transform: translateX(0);
+        /* padding: 150; */
+    }
+    .nav-list{
+        flex-direction: column;
+        font-size: 20px;
+        gap: 30px;
+    }
+    .nav-link {
+        font-size: 27px;
+    }
+    .intro-left::before{
+        display: none;
+    }
+    .burger{
+        display: flex;
+        position: fixed;
+        right: 20px;
+    }
+    .intro-btn{
+        margin: 25px;
+    }
+}
